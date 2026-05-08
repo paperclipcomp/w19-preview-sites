@@ -1,131 +1,197 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-ZA">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>prestoelectrical.co.za — Professional Electrician in Johannesburg</title>
+<title>Prestoelectrical | Preview Site by Creativ Agentz</title>
+<meta name="description" content="Preview website for Prestoelectrical — electrician services in Johannesburg. Built by Creativ Agentz.">
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Electrician",
-  "name": "Prestoelectrical",
-  "url": "https://www.prestoelectrical.co.za/",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Johannesburg",
-    "addressCountry": "ZA"
-  },
-  "areaServed": "Johannesburg"
-}
+{"@context":"https://schema.org","@type":"LocalBusiness","name":"Prestoelectrical","address":{"@type":"PostalAddress","addressLocality":"Johannesburg","addressCountry":"ZA"}}
 </script>
-
 <style>
-:root{--brand:#2980b9;}
+:root{--brand:#2980b9;--dark:#1a1a2e;--light:#f8f9fa}
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',system-ui,-apple-system,sans-serif}
-body{color:#333;line-height:1.6}
-header{position:sticky;top:0;background:#fff;box-shadow:0 2px 10px rgba(0,0,0,0.1);z-index:1000}
-.header-inner{max-width:1140px;margin:0 auto;padding:1rem 2rem;display:flex;align-items:center;justify-content:space-between}
+body{color:#333;line-height:1.6;background:#fff}
+/* Nav */
+header{position:sticky;top:0;background:#fff;box-shadow:0 2px 10px rgba(0,0,0,.1);z-index:1000}
+.nav-inner{max-width:1140px;margin:0 auto;padding:.9rem 2rem;display:flex;align-items:center;justify-content:space-between}
 .logo{font-weight:800;font-size:1.4rem;color:var(--brand);text-decoration:none}
-.hero{background:linear-gradient(135deg,rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url(https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=800&fit=crop&q=80);background-size:cover;background-position:center;color:#fff;padding:6rem 2rem;text-align:center}
-.hero h1{font-size:2.5rem;margin-bottom:1rem;text-shadow:0 2px 4px rgba(0,0,0,0.3)}
-.hero p{font-size:1.1rem;max-width:600px;margin:0 auto 2rem}
-.btn{display:inline-block;padding:0.9rem 2rem;border-radius:8px;text-decoration:none;font-weight:600;transition:all 0.3s}
+.nav-cta{background:var(--brand);color:#fff;padding:.6rem 1.4rem;border-radius:8px;text-decoration:none;font-weight:600;font-size:.9rem}
+/* Hero */
+.hero{background:linear-gradient(135deg,rgba(0,0,0,.65),rgba(0,0,0,.45)),url(https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=1200&fit=crop&q=80) center/cover no-repeat;color:#fff;padding:5rem 2rem;text-align:center}
+.badge{display:inline-block;background:var(--brand);color:#fff;padding:.3rem .9rem;border-radius:20px;font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;margin-bottom:1.2rem}
+.hero h1{font-size:clamp(1.8rem,5vw,3rem);font-weight:800;margin-bottom:1rem;line-height:1.2}
+.hero p{font-size:1.1rem;max-width:620px;margin:0 auto 2rem;opacity:.92}
+.btn-group{display:flex;flex-wrap:wrap;gap:1rem;justify-content:center}
+.btn{display:inline-block;padding:.9rem 2rem;border-radius:8px;text-decoration:none;font-weight:600;transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(0,0,0,.2)}
 .btn-primary{background:#fff;color:var(--brand)}
-.btn-primary:hover{transform:translateY(-2px);box-shadow:0 10px 20px rgba(0,0,0,0.2)}
-section{padding:4rem 2rem;max-width:1140px;margin:0 auto}
-.pain-hook{background:#f8f9fa;border-left:5px solid var(--brand);padding:1.5rem;margin:2rem auto;max-width:800px;border-radius:0 8px 8px 0}
-.services{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2rem;margin-top:2rem}
-.service-card{background:#fff;padding:2rem;border-radius:12px;box-shadow:0 4px 6px rgba(0,0,0,0.07);border-top:4px solid var(--brand);transition:transform 0.2s}
+.btn-stripe{background:var(--brand);color:#fff;border:2px solid rgba(255,255,255,.3)}
+/* Pain hook */
+.pain-section{background:var(--light);padding:2.5rem 2rem}
+.pain-inner{max-width:860px;margin:0 auto;border-left:5px solid var(--brand);padding:1.4rem 1.6rem;background:#fff;border-radius:0 10px 10px 0;box-shadow:0 2px 10px rgba(0,0,0,.06)}
+.pain-inner h3{color:var(--brand);margin-bottom:.5rem;font-size:1.05rem}
+/* Services */
+.services-section{padding:4rem 2rem}
+.section-inner{max-width:1140px;margin:0 auto}
+.section-label{display:block;text-align:center;background:var(--brand);color:#fff;padding:.25rem .8rem;border-radius:20px;font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;margin:0 auto .6rem;width:fit-content}
+h2{text-align:center;font-size:1.8rem;margin-bottom:.4rem}
+.subtitle{text-align:center;color:#666;margin-bottom:2.5rem;font-size:.95rem}
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.5rem}
+.service-card{background:#fff;padding:1.6rem;border-radius:12px;box-shadow:0 4px 12px rgba(0,0,0,.07);border-top:4px solid var(--brand);transition:transform .2s}
 .service-card:hover{transform:translateY(-4px)}
-.service-card h3{color:var(--brand);margin-bottom:0.5rem;font-size:1.1rem}
-.contact-form{background:#f8f9fa;padding:2rem;border-radius:12px;margin-top:2rem}
+.price-tag{background:var(--brand);color:#fff;padding:.2rem .6rem;border-radius:6px;font-size:.75rem;font-weight:700;display:inline-block;margin-bottom:.6rem}
+.service-card h3{font-size:1rem;margin-bottom:.4rem;color:var(--dark)}
+.service-card p{font-size:.88rem;color:#555;line-height:1.5}
+/* Why us */
+.why-section{background:var(--dark);color:#fff;padding:4rem 2rem}
+.why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.5rem;margin-top:2rem}
+.why-card{padding:1.4rem;border-radius:10px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12)}
+.why-card h3{margin-bottom:.4rem;font-size:1rem}
+.why-card p{font-size:.85rem;opacity:.8;line-height:1.5}
+/* Contact */
+.contact-section{padding:4rem 2rem;background:var(--light)}
+.contact-box{max-width:760px;margin:0 auto;background:#fff;border-radius:14px;padding:2.4rem;box-shadow:0 4px 20px rgba(0,0,0,.08)}
+.contact-meta{display:flex;flex-wrap:wrap;gap:1.2rem;margin-bottom:2rem}
+.contact-item{display:flex;align-items:center;gap:.5rem;font-size:.95rem}
+.contact-item a{color:var(--brand);text-decoration:none;font-weight:600}
 .form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem}
-input,textarea,select{width:100%;padding:0.8rem;border:1px solid #ddd;border-radius:6px;font-size:1rem;font-family:inherit}
-input[type="submit"]{background:var(--brand);color:#fff;border:none;cursor:pointer;font-weight:600;padding:1rem 2.5rem;width:auto}
-input[type="submit"]:hover{opacity:0.9}
-.honeypot{position:absolute;left:-5000px}
-footer{background:#1a1a2e;color:#fff;text-align:center;padding:2rem;margin-top:4rem}
-.tag{display:inline-block;background:var(--brand);color:#fff;padding:0.2rem 0.8rem;border-radius:20px;font-size:0.75rem;font-weight:600;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:1rem}
-@media(max-width:768px){
-.hero h1{font-size:1.8rem}
+input,textarea,select{width:100%;padding:.8rem;border:1px solid #ddd;border-radius:6px;font-size:.95rem;font-family:inherit}
+input:focus,textarea:focus,select:focus{outline:none;border-color:var(--brand)}
+.honeypot{position:absolute;left:-9999px}
+.submit-btn{background:var(--brand);color:#fff;border:none;cursor:pointer;font-weight:700;padding:1rem 2.5rem;border-radius:8px;font-size:1rem;transition:opacity .2s}
+.submit-btn:hover{opacity:.88}
+/* Footer */
+footer{background:var(--dark);color:#fff;text-align:center;padding:2rem 1.5rem}
+footer p{font-size:.85rem;opacity:.75;margin-top:.5rem}
+.popia-notice{font-size:.78rem;opacity:.6;margin-top:.8rem;max-width:700px;margin-left:auto;margin-right:auto;line-height:1.5}
+/* Responsive */
+@media(max-width:640px){
+.hero{padding:3rem 1.5rem}
 .form-row{grid-template-columns:1fr}
-.services{grid-template-columns:1fr}
+.nav-cta{display:none}
 }
 </style>
 </head>
 <body>
 
 <header>
-  <div class="header-inner">
+  <div class="nav-inner">
     <a href="#" class="logo">Prestoelectrical</a>
+    <a href="#contact" class="nav-cta">Request a Call-Out</a>
   </div>
 </header>
 
 <section class="hero">
-  <div class="tag">Electrician · Johannesburg</div>
-  <h1>Your New Website</h1>
-  <p>Hi Presto, this is a preview of what Creativ Agentz could build for prestoelectrical.co.za. A modern, mobile-friendly site that turns browsers into customers.</p>
-  <a href="#contact" class="btn btn-primary">Get a Quote</a>
+  <span class="badge">Electrician · Johannesburg</span>
+  <h1>Your Business Deserves a Better Website.</h1>
+  <p>Hi Presto, this is a preview of what Creativ Agentz could build for <strong>Prestoelectrical</strong>. A modern, mobile-first site that turns visitors into paying customers — live in 5 business days.</p>
+  <div class="btn-group">
+    <a href="#contact" class="btn btn-primary">Request a Call-Out</a>
+    <a href="https://buy.stripe.com/cNi00j5Pz3TtbNl6rv6c00j" class="btn btn-stripe" target="_blank" rel="noopener">💳 Claim Your Site — from R3,999</a>
+  </div>
 </section>
 
-<section>
-  <div class="pain-hook">
+<section class="pain-section">
+  <div class="pain-inner">
     <h3>💡 Your Growth Opportunity</h3>
-    <p>No service pricing or availability online — customers call competitors instead A professional website with online booking fixes this instantly.</p>
+    <p>No service pricing or availability online — customers call competitors instead. A professional website with online booking and Google-optimised pages fixes this — and Creativ Agentz can have yours live in days, not weeks.</p>
   </div>
 </section>
 
-<section>
-  <p class="tag" style="display:block;text-align:center;margin:0 auto 0.5rem;width:fit-content">What We Offer</p>
-  <h2 style="text-align:center;margin-bottom:0.5rem">Popular Services</h2>
-  <p style="text-align:center;color:#666;margin-bottom:2rem">These would be customised to match your exact services.</p>
-  <div class="services">
-    <div class="service-card"><h3>Electrical Repairs</h3><p>Fast, certified repairs for faults, tripping circuits, and power outages.</p></div>
-    <div class="service-card"><h3>Rewiring & Installations</h3><p>Full and partial rewiring, fuse board upgrades, and lighting installations.</p></div>
-    <div class="service-card"><h3>Emergency Call-Outs</h3><p>24/7 emergency electrician available across our service area.</p></div>
-  </div>
-</section>
-
-<section>
-  <p class="tag" style="display:block;text-align:center;margin:0 auto 0.5rem;width:fit-content">Why Creativ Agentz</p>
-  <h2 style="text-align:center;margin-bottom:0.5rem">What You Get</h2>
-  <div class="services">
-    <div class="service-card"><h3>📱 Mobile-First Design</h3><p>Over 70% of local searches happen on mobile. Your site will look stunning and load fast on every device.</p></div>
-    <div class="service-card"><h3>🔍 Google Optimised</h3><p>Built with schema markup, fast loading, and local SEO so customers in Johannesburg find you first.</p></div>
-    <div class="service-card"><h3>✅ Online Booking</h3><p>Let customers book or request quotes 24/7 — never miss a lead again.</p></div>
-  </div>
-</section>
-
-<section id="contact">
-  <p class="tag" style="display:block;text-align:center;margin:0 auto 0.5rem;width:fit-content">Let's Talk</p>
-  <h2 style="text-align:center;margin-bottom:0.5rem">Get in Touch</h2>
-  <p style="text-align:center;color:#666;margin-bottom:2rem">Interested in your own site? We'd love to hear from you.</p>
-  <div class="contact-form">
-    <form action="mailto:ceo@creativagentz.com" method="POST">
-      <input type="text" name="_gotcha" class="honeypot" />
-      <div class="form-row">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Email Address" required>
+<section class="services-section">
+  <div class="section-inner">
+    <span class="section-label">Services</span>
+    <h2>What Prestoelectrical Could Offer Online</h2>
+    <p class="subtitle">These service pages would be customised to match your exact offerings and pricing in ZAR.</p>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="price-tag">From R350 call-out</div>
+        <h3>Fault Finding & Repairs</h3>
+        <p>Fast diagnosis and repair of tripping circuits, power faults, and wiring issues.</p>
       </div>
-      <div class="form-row">
-        <input type="tel" name="phone" placeholder="Phone Number">
-        <select name="service">
-          <option value="">Interested in...</option>
-          <option value="new-website">New Website</option>
-          <option value="redesign">Website Redesign</option>
-          <option value="booking">Online Booking System</option>
-          <option value="seo">SEO & Google Ranking</option>
-        </select>
+      <div class="service-card">
+        <div class="price-tag">From R850</div>
+        <h3>Rewiring & Installations</h3>
+        <p>Full and partial rewiring, DB board upgrades, and lighting installations.</p>
       </div>
-      <textarea name="message" rows="4" placeholder="Tell us about your business..."></textarea>
-      <p style="margin-top:1rem"><input type="submit" value="Send Message"></p>
-    </form>
+      <div class="service-card">
+        <div class="price-tag">R450/hour (24/7)</div>
+        <h3>Emergency Call-Outs</h3>
+        <p>24-hour emergency electrician available across the Johannesburg/Pretoria area.</p>
+      </div>
+      <div class="service-card">
+        <div class="price-tag">From R1,200</div>
+        <h3>Certificate of Compliance</h3>
+        <p>COC issued by a registered electrician — required for property sales and rentals.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="why-section">
+  <div class="section-inner">
+    <span class="section-label" style="background:rgba(255,255,255,.15);color:#fff">Why Creativ Agentz</span>
+    <h2 style="color:#fff">What You Get With Your New Site</h2>
+    <div class="why-grid">
+      <div class="why-card">
+        <h3>📱 Mobile-First Design</h3>
+        <p>Over 70% of local searches happen on mobile. Your site will look stunning and load fast on every device.</p>
+      </div>
+      <div class="why-card">
+        <h3>🔍 Local SEO Built-In</h3>
+        <p>Schema markup, fast Core Web Vitals, and local keyword optimisation so customers in Johannesburg find you first.</p>
+      </div>
+      <div class="why-card">
+        <h3>📅 Online Booking</h3>
+        <p>Let customers book or request quotes 24/7 without calling. Never miss a lead again.</p>
+      </div>
+      <div class="why-card">
+        <h3>🚀 Live in 5 Days</h3>
+        <p>We build, host, and deploy — you just approve. No technical knowledge needed.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact-section" id="contact">
+  <div class="section-inner">
+    <span class="section-label">Contact</span>
+    <h2>Get in Touch with Prestoelectrical</h2>
+    <p class="subtitle">Fill in the form below and we'll be in touch within one business day.</p>
+    <div class="contact-box">
+      <div class="contact-meta">
+        <span class="contact-item">📞 <a href="tel:+27000000000">+27 (your number)</a></span>
+        <span class="contact-item">✉️ <a href="mailto:info@prestoelectrical.co.za">info@prestoelectrical.co.za</a></span>
+        <span class="contact-item">📍 Johannesburg, South Africa</span>
+      </div>
+      <form action="mailto:info@prestoelectrical.co.za" method="POST" enctype="text/plain">
+        <input type="text" name="_gotcha" class="honeypot" tabindex="-1" autocomplete="off">
+        <div class="form-row">
+          <input type="text" name="name" placeholder="Your Name" required>
+          <input type="email" name="email" placeholder="Email Address" required>
+        </div>
+        <div class="form-row">
+          <input type="tel" name="phone" placeholder="Phone Number">
+          <select name="service">
+            <option value="">Service of interest...</option>
+            <option>New Website (from R3,999)</option>
+            <option>Website Redesign</option>
+            <option>Online Booking System</option>
+            <option>Google SEO Package</option>
+          </select>
+        </div>
+        <textarea name="message" rows="4" placeholder="Tell us about your business and what you need..." style="margin-bottom:1rem"></textarea>
+        <button type="submit" class="submit-btn">Send Message →</button>
+      </form>
+    </div>
   </div>
 </section>
 
 <footer>
-  <p>© 2026 Prestoelectrical — Johannesburg</p>
-  <p style="font-size:0.8rem;opacity:0.7;margin-top:0.5rem">Preview site built by <a href="https://creativagentz.com" style="color:var(--brand)">Creativ Agentz</a> · This is a demo preview</p>
+  <p>© 2026 Prestoelectrical — Johannesburg, South Africa</p>
+  <p>Preview site built by <a href="https://creativagentz.com" style="color:var(--brand)">Creativ Agentz</a> · This is a demo — not the live site</p>
+  <p class="popia-notice">In accordance with the Protection of Personal Information Act (POPIA), Act 4 of 2013, personal information submitted via this form is collected solely for the purpose of responding to your enquiry and will not be shared with third parties without your consent. You have the right to access, correct, or request deletion of your information at any time by contacting us at info@prestoelectrical.co.za.</p>
 </footer>
 
 </body>
