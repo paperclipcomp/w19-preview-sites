@@ -1,0 +1,12 @@
+{
+  "name": "w19-preview-sites",
+  "version": "1.0.0",
+  "description": "20 preview sites for W19 CRE prospects",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.0"
+  }
+}
