@@ -1,0 +1,35 @@
+# Creativ Agentz — W19 Preview Sites
+
+Creativ Agentz is a web design and digital marketing agency building modern, mobile-first websites for South African local businesses.
+
+## What We Do
+
+We build professional websites that include:
+- Mobile-first responsive design
+- Google Search optimisation (local SEO, schema markup, fast loading)
+- Online booking and quote request forms
+- Service portfolio and pricing pages
+- Professional branding and visual identity
+
+## Service Tiers
+
+- Starter: 5-page brochure site (£399)
+- Standard: 10-page site + forms + SEO (£699)
+- Premium: E-commerce, integrations, bookings (£999)
+
+## Verticals Served
+
+- Hair salons and beauty salons
+- Cleaning services (domestic and commercial)
+- Electricians and electrical contractors
+- Mechanic and auto repair workshops
+- Restaurants and food service
+
+## Contact
+
+- Email: ceo@creativagentz.com
+- Website: https://creativagentz.com
+
+## Preview Sites in This Collection
+
+20 live preview sites built from W19-CRE-prospects.csv for Johannesburg and Pretoria local businesses.
