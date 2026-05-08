@@ -1,1 +1,67 @@
-...
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>W19 Prospect Preview Sites — Creativ Agentz</title>
+<style>
+* { margin:0; padding:0; box-sizing:border-box; font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; }
+body { background: #1a1a2e; color: #fff; padding: 3rem 2rem; }
+.container { max-width: 1000px; margin: 0 auto; }
+h1 { font-size: 2rem; margin-bottom: 0.5rem; }
+p.sub { color: #aaa; margin-bottom: 2rem; }
+.sites { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1rem; }
+a.site { display: block; background: #16213e; padding: 1.5rem; border-radius: 12px; text-decoration: none; color: #fff; transition: transform 0.2s, background 0.2s; border-left: 4px solid #e94560; }
+a.site:hover { transform: translateY(-3px); background: #1f2937; }
+a.site .name { font-weight: 700; font-size: 1.1rem; margin-bottom: 0.3rem; display: block; }
+a.site .meta { font-size: 0.85rem; color: #aaa; }
+.badge { display: inline-block; padding: 0.15rem 0.5rem; border-radius: 4px; font-size: 0.7rem; font-weight: 600; text-transform: uppercase; margin-left: 0.5rem; }
+.badge.salon { background: #c0392b; }
+.badge.cleaner { background: #27ae60; }
+.badge.electrician { background: #2980b9; }
+.badge.mechanic { background: #f39c12; color: #1a1a2e; }
+.badge.restaurant { background: #8e44ad; }
+footer { text-align: center; margin-top: 3rem; color: #666; font-size: 0.85rem; }
+</style>
+</head>
+<body>
+<div class="container">
+  <h1> W19 Prospect Preview Sites</h1>
+  <p class="sub">20 live preview sites built from the W19-CRE-prospects.csv</p>
+  <div class="sites" id="sites"></div>
+</div>
+<footer>
+  <p>Built by Creativ Agentz  2026</p>
+</footer>
+<script>
+const sites = [
+  {name:'orizoeservices.co.za',slug:'orizoeservices-co-za',type:'cleaner',city:'Johannesburg'},
+  {name:'extremecleaning.co.za',slug:'extremecleaning-co-za',type:'cleaner',city:'Johannesburg'},
+  {name:'electricianjohannesburg.com',slug:'electricianjohannesburg-com',type:'electrician',city:'Johannesburg'},
+  {name:'247careelectricalandplumbing.simdif.com',slug:'247careelectricalandplumbing-simdif-com',type:'electrician',city:'Johannesburg'},
+  {name:'johannesburg-electrician.com',slug:'johannesburg-electrician-com',type:'electrician',city:'Johannesburg'},
+  {name:'robertshamservicecentre.co.za',slug:'robertshamservicecentre-co-za',type:'mechanic',city:'Johannesburg'},
+  {name:'promechanics.co.za',slug:'promechanics-co-za',type:'mechanic',city:'Johannesburg'},
+  {name:'hairtural.com',slug:'hairtural-com',type:'salon',city:'Johannesburg'},
+  {name:'gandhisquareprecinct.com',slug:'gandhisquareprecinct-com',type:'salon',city:'Johannesburg'},
+  {name:'marble.restaurant',slug:'marble-restaurant',type:'restaurant',city:'Johannesburg'},
+  {name:'trendysalon.co.za',slug:'trendysalon-co-za',type:'salon',city:'Johannesburg'},
+  {name:'hairstudioplus.co.za',slug:'hairstudioplus-co-za',type:'salon',city:'Johannesburg'},
+  {name:'perfectmobilemechanic.co.za',slug:'perfectmobilemechanic-co-za',type:'mechanic',city:'Johannesburg'},
+  {name:'themobilemechanic.co.za',slug:'themobilemechanic-co-za',type:'mechanic',city:'Johannesburg'},
+  {name:'safeelets.co.za',slug:'safeelets-co-za',type:'electrician',city:'Pretoria'},
+  {name:'totalelectric.co.za',slug:'totalelectric-co-za',type:'electrician',city:'Johannesburg'},
+  {name:'prestoelectrical.co.za',slug:'prestoelectrical-co-za',type:'electrician',city:'Johannesburg'},
+  {name:'sparklesolutions.co.za',slug:'sparklesolutions-co-za',type:'cleaner',city:'Pretoria'},
+  {name:'thecarecleaners.co.za',slug:'thecarecleaners-co-za',type:'cleaner',city:'Johannesburg'},
+  {name:'pristineimage.co.za',slug:'pristineimage-co-za',type:'cleaner',city:'Johannesburg'},
+];
+document.getElementById('sites').innerHTML = sites.map(s =>
+  '<a class="site" href="' + s.slug + '/index.html">' +
+  '<span class="name">' + s.name + ' <span class="badge ' + s.type + '">' + s.type + '</span></span>' +
+  '<span class="meta">' + s.city + '  Preview site</span>' +
+  '</a>'
+).join('');
+</script>
+</body>
+</html>
