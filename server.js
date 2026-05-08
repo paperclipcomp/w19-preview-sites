@@ -33,7 +33,7 @@ app.use((req, res) => {
   if (host && fs.existsSync(path.join(siteDir, 'index.html'))) {
     res.sendFile(path.join(siteDir, 'index.html'));
   } else {
-    const indexPath = path.join(ROOT, 'index.html');
+    const indexPath = path.join(ROOT, 'fallback.html');
     if (fs.existsSync(indexPath)) {
       res.sendFile(indexPath);
     } else {
