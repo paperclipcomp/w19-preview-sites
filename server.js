@@ -3,11 +3,14 @@ const path = require('path');
 const fs = require('fs');
 
 const app = express();
+app.set('trust proxy', true);
 const ROOT = __dirname;
 const PORT = process.env.PORT || 3000;
 
 app.use((req, res) => {
-  const host = (req.hostname || '').split('.')[0];
+  // Traefik/Cloudflare may rewrite Host; prefer X-Forwarded-Host
+  const rawHost = req.get('x-forwarded-host') || req.get('host') || req.hostname || '';
+  const host = rawHost.split('.')[0];
   const siteDir = path.join(ROOT, host);
 
   if (host && fs.existsSync(path.join(siteDir, 'index.html'))) {
